@@ -14,8 +14,8 @@ class ParseFromData<T: Decodable>{
     class func parse(data: Data) -> Result<T, ApiError> {
         let jsonDecoder = JSONDecoder()
         
-        if let error = try? jsonDecoder.decode(ApiResponseError.self, from: data) {
-            return .failure(.network(errorMessage: error.message))
+        if let error = try? jsonDecoder.decode(ApiResponseErrorType.self, from: data) {
+            return .failure(.network(errorMessage: error.error.message))
         }
         
         do {

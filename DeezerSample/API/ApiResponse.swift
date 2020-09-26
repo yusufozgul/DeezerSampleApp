@@ -12,6 +12,10 @@ struct ApiResponseWithInData<T: Decodable>: Decodable {
     let data: T
 }
 
+struct ApiResponseErrorType: Decodable {
+    let error: ApiResponseError
+}
+
 /// Generic Deezer Api error response type
 struct ApiResponseError: Decodable {
     let type: String
