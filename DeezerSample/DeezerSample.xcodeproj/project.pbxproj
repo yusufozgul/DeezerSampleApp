@@ -15,6 +15,12 @@
 		97337F7A251E5EC60088D515 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97337F78251E5EC60088D515 /* LaunchScreen.storyboard */; };
 		97337F85251E5EC70088D515 /* DeezerSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97337F84251E5EC70088D515 /* DeezerSampleTests.swift */; };
 		97337F90251E5EC70088D515 /* DeezerSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97337F8F251E5EC70088D515 /* DeezerSampleUITests.swift */; };
+		97337FAB251E603C0088D515 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97337FAA251E603C0088D515 /* ApiClient.swift */; };
+		97647E60251F2CAC007FA374 /* ApiExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97647E5F251F2CAC007FA374 /* ApiExtension.swift */; };
+		97647EDA251F42D9007FA374 /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97647ED9251F42D9007FA374 /* DataParser.swift */; };
+		97647EE0251F465E007FA374 /* APITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97647EDF251F465E007FA374 /* APITest.swift */; };
+		97647EFD251F483E007FA374 /* genreList.json in Resources */ = {isa = PBXBuildFile; fileRef = 97647EFC251F483E007FA374 /* genreList.json */; };
+		97A5AC91251F4CE100BA7321 /* ErroredResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 97A5AC90251F4CE100BA7321 /* ErroredResponse.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +132,141 @@
 				97337F91251E5EC70088D515 /* Info.plist */,
 			);
 			path = DeezerSampleUITests;
+			sourceTree = "<group>";
+		};
+		97337FA2251E5FF10088D515 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				97337FAA251E603C0088D515 /* ApiClient.swift */,
+				97647E5F251F2CAC007FA374 /* ApiExtension.swift */,
+				97647E7E251F3155007FA374 /* ApiResponse.swift */,
+				97647ED9251F42D9007FA374 /* DataParser.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		97337FA3251E5FF90088D515 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				97647E6A251F2DBF007FA374 /* GenreListPage */,
+				97647E89251F34A8007FA374 /* ArtistListPage */,
+				97647E9B251F3594007FA374 /* ArtistDetailPage */,
+				97647EAA251F395E007FA374 /* AlbumDetailPage */,
+				97647EB9251F3C64007FA374 /* SearchPage */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		97647E6A251F2DBF007FA374 /* GenreListPage */ = {
+			isa = PBXGroup;
+			children = (
+				97647E6B251F2E41007FA374 /* Entity */,
+			);
+			path = GenreListPage;
+			sourceTree = "<group>";
+		};
+		97647E6B251F2E41007FA374 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				97647E6C251F2E6F007FA374 /* GenreListRequest.swift */,
+				97647E74251F2F9B007FA374 /* GenreResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		97647E89251F34A8007FA374 /* ArtistListPage */ = {
+			isa = PBXGroup;
+			children = (
+				97647E8A251F34BD007FA374 /* Entity */,
+			);
+			path = ArtistListPage;
+			sourceTree = "<group>";
+		};
+		97647E8A251F34BD007FA374 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				97647E8B251F34D4007FA374 /* ArtistListRequest.swift */,
+				97647E93251F34E4007FA374 /* ArtistResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		97647E9B251F3594007FA374 /* ArtistDetailPage */ = {
+			isa = PBXGroup;
+			children = (
+				97647E9C251F359F007FA374 /* Entity */,
+			);
+			path = ArtistDetailPage;
+			sourceTree = "<group>";
+		};
+		97647E9C251F359F007FA374 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				97647E9D251F35AF007FA374 /* ArtistDetailRequest.swift */,
+				97647EA5251F363C007FA374 /* ArtistDetailResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		97647EAA251F395E007FA374 /* AlbumDetailPage */ = {
+			isa = PBXGroup;
+			children = (
+				97647EAB251F3969007FA374 /* Entity */,
+			);
+			path = AlbumDetailPage;
+			sourceTree = "<group>";
+		};
+		97647EAB251F3969007FA374 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				97647EAC251F397C007FA374 /* AlbumDetailRequest.swift */,
+				97647EB4251F39C7007FA374 /* AlbumDetailResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		97647EB9251F3C64007FA374 /* SearchPage */ = {
+			isa = PBXGroup;
+			children = (
+				97647EBA251F3C6F007FA374 /* Entity */,
+			);
+			path = SearchPage;
+			sourceTree = "<group>";
+		};
+		97647EBA251F3C6F007FA374 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				97647EBB251F3C7F007FA374 /* SearchRequest.swift */,
+				97647EC3251F3CB7007FA374 /* SearchResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		97647EDE251F464A007FA374 /* APITest */ = {
+			isa = PBXGroup;
+			children = (
+				97647EDF251F465E007FA374 /* APITest.swift */,
+				97647EFC251F483E007FA374 /* genreList.json */,
+				97A5AC90251F4CE100BA7321 /* ErroredResponse.json */,
+			);
+			path = APITest;
+			sourceTree = "<group>";
+		};
+		97647EE7251F467A007FA374 /* SampleData */ = {
+			isa = PBXGroup;
+			children = (
+				97647EE8251F469C007FA374 /* genreList.json */,
+			);
+			path = SampleData;
+			sourceTree = "<group>";
+		};
+		97647EF0251F46AD007FA374 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				97647EE7251F467A007FA374 /* SampleData */,
+				97647EF1251F46DF007FA374 /* ResourceLoader.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
