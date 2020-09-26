@@ -9,7 +9,7 @@ import Foundation
 
 /// Some list data return inside `data` field
 struct ApiResponseWithInData<T: Decodable>: Decodable {
-    let data: T?
+    let data: T
 }
 
 /// Generic Deezer Api error response type
