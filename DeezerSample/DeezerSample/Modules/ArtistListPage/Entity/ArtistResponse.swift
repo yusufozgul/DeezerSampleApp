@@ -16,6 +16,8 @@ struct ArtistResponse: Decodable, Hashable {
     let pictureBig: String
     let pictureXl: String
     let tracklist: String
+    let nbAlbum: Int?
+    let nbFan: Int?
     
     enum CodingKeys: String, CodingKey {
         case id, name, picture, tracklist
@@ -23,5 +25,7 @@ struct ArtistResponse: Decodable, Hashable {
         case pictureMedium = "picture_medium"
         case pictureBig = "picture_big"
         case pictureXl = "picture_xl"
+        case nbAlbum = "nb_album"
+        case nbFan = "nb_fan"
     }
 }

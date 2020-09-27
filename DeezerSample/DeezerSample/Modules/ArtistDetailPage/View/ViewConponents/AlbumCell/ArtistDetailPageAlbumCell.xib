@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ArtistDetailPageAlbumCell" customModule="DeezerSample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NSW-o3-v4V">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="NSW-o3-v4V" secondAttribute="height" multiplier="1:1" id="CSo-W7-C4W"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="U8X-ls-tx6">
+                        <rect key="frame" x="120" y="26.5" width="180" height="47"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6L-M2-Dg7">
+                                <rect key="frame" x="0.0" y="0.0" width="180" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="999" verticalHuggingPriority="251" horizontalCompressionResistancePriority="999" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ZY-xC-eaq">
+                                <rect key="frame" x="0.0" y="27.5" width="180" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="NSW-o3-v4V" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="DLx-yD-hRj"/>
+                <constraint firstAttribute="trailing" secondItem="U8X-ls-tx6" secondAttribute="trailing" id="MvL-4S-s4I"/>
+                <constraint firstItem="U8X-ls-tx6" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="UPs-5j-5UN"/>
+                <constraint firstItem="NSW-o3-v4V" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="bYC-yL-AG8"/>
+                <constraint firstAttribute="bottom" secondItem="NSW-o3-v4V" secondAttribute="bottom" id="jQn-cs-K3M"/>
+                <constraint firstItem="U8X-ls-tx6" firstAttribute="leading" secondItem="NSW-o3-v4V" secondAttribute="trailing" constant="20" id="sG3-7B-RhJ"/>
+            </constraints>
+            <connections>
+                <outlet property="albumImage" destination="NSW-o3-v4V" id="tXb-Kh-TT8"/>
+                <outlet property="albumName" destination="c6L-M2-Dg7" id="y5F-Ta-JAU"/>
+                <outlet property="albumReleaseDate" destination="7ZY-xC-eaq" id="KIc-N7-sGg"/>
+            </connections>
+            <point key="canvasLocation" x="-46.376811594202906" y="112.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

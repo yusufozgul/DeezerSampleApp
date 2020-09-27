@@ -63,7 +63,7 @@ extension GenreListPage {
 extension GenreListPage {
     func makeCollectionView() {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createLayout())
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .systemBackground
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.delegate = self
         view.addSubview(collectionView)

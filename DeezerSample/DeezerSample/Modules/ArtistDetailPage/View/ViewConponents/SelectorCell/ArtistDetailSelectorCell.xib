@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ArtistDetailSelectorCell" customModule="DeezerSample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="HZh-mg-o6B">
+                        <rect key="frame" x="0.0" y="9.5" width="300" height="32"/>
+                        <segments>
+                            <segment title="First"/>
+                            <segment title="Second"/>
+                        </segments>
+                        <connections>
+                            <action selector="indexChanged:" destination="gTV-IL-0wX" eventType="valueChanged" id="l8f-EY-3bC"/>
+                        </connections>
+                    </segmentedControl>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="HZh-mg-o6B" secondAttribute="trailing" id="OEB-7k-beE"/>
+                <constraint firstItem="HZh-mg-o6B" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="c8p-Bb-DOz"/>
+                <constraint firstItem="HZh-mg-o6B" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="okM-8O-zFX"/>
+            </constraints>
+            <connections>
+                <outlet property="indexSelector" destination="HZh-mg-o6B" id="45Y-g1-3rL"/>
+            </connections>
+            <point key="canvasLocation" x="-45" y="113"/>
+        </collectionViewCell>
+    </objects>
+</document>

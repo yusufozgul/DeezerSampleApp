@@ -66,7 +66,7 @@ extension ArtistListPageVC {
 extension ArtistListPageVC {
     func makeCollectionView() {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createLayout())
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .systemBackground
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.delegate = self
         view.addSubview(collectionView)
