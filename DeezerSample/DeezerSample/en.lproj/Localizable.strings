@@ -10,3 +10,6 @@
 "GENRE_LIST_TITLE" = "Genre List";
 "ALERT_TITLE" = "Alert";
 "ALERT_CANCEL_BUTTON_TITLE" = "Cancel";
+
+// MARK: - Artists Page
+"ARTIST_LIST_TITLE" = "Artist List";
