@@ -58,8 +58,8 @@ extension ArtistDetailPagePresenter: ArtistDetailPagePresenterProtocol {
     
     func selectItem(at index: Int) {
         if currentPageIndex == .albums {
-            let id = artistAlbums[index].id
-            router.navigateToAlbumdetail(to: String(id))
+            let album = artistAlbums[index]
+            router.navigateToAlbumdetail(to: String(album.id), name: album.title)
         } else if currentPageIndex == .related {
             let id = artistRelated[index].id
             router.navigateToArtistsDetail(to: String(id))
