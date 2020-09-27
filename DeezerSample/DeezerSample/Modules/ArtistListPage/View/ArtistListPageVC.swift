@@ -29,9 +29,12 @@ extension ArtistListPageVC: ArtistListPageVCProtocol {
     func prepareUI() {
         makeCollectionView()
         setActiviyIndicator()
-        self.title = "ARTIST_LIST_TITLE".localized
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.largeTitleDisplayMode = .automatic
+    }
+    
+    func setTitle(title: String) {
+        self.title = "ARTIST_LIST_TITLE".localized + ": " + title
     }
     
     func showArtistList(with snapshot: ArtistListPageSnapshot) {

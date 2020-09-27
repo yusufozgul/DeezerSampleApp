@@ -17,12 +17,14 @@ class ArtistListPagePresenter {
     private let router: ArtistListPageRouterProtocol
     private(set) var genreList: [ArtistResponse] = []
     private let genreID: String
+    private let genreName: String
     
-    init(view: ArtistListPageVCProtocol, interactor: ArtistListPageInteractorProtocol, router: ArtistListPageRouterProtocol, genreID: String) {
+    init(view: ArtistListPageVCProtocol, interactor: ArtistListPageInteractorProtocol, router: ArtistListPageRouterProtocol, genreID: String, genreName: String) {
         self.view = view
         self.interactor = interactor
         self.router = router
         self.genreID = genreID
+        self.genreName = genreName
     }
 }
 
@@ -34,6 +36,7 @@ extension ArtistListPagePresenter: ArtistListPagePresenterProtocol {
     
     func viewDidLoad() {
         view?.prepareUI()
+        view?.setTitle(title: genreName)
         interactor.getArtists(at: genreID)
         view?.setLoading(isLoading: true)
     }
