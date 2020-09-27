@@ -13,3 +13,9 @@
 
 // MARK: - Artists Page
 "ARTIST_LIST_TITLE" = "Artist List";
+
+
+// MARK: - Artist Detail Page
+
+"INDEX_ALBUMS" = "Albums";
+"INDEX_RELATED_ARTISTS" = "Related Artists";

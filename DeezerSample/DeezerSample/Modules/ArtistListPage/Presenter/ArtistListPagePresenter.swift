@@ -6,7 +6,6 @@
 //
 
 import Foundation
-
 import UIKit.NSDiffableDataSourceSectionSnapshot
 
 typealias ArtistListPageSnapshot = NSDiffableDataSourceSnapshot<ArtistListSection, ArtistResponse>
