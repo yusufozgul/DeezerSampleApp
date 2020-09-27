@@ -8,5 +8,5 @@
 import Foundation
 
 protocol GenreListRouterProtocol {
-    func navigateToGenresArtist(to id: String)
+    func navigateToGenresArtist(to id: String, genreName: String)
 }

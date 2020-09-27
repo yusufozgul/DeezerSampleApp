@@ -31,8 +31,8 @@ extension GenreListPresenter: GenreListPresenterProtocol {
     }
     
     func selectGenre(at index: Int) {
-        let id = genreList[index].id
-        router.navigateToGenresArtist(to: String(id))
+        let genre = genreList[index]
+        router.navigateToGenresArtist(to: String(genre.id), genreName: genre.name)
     }
 }
 

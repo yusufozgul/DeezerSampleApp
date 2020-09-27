@@ -29,8 +29,10 @@ class GenreListRouter {
 }
 
 extension GenreListRouter: GenreListRouterProtocol {
-    func navigateToGenresArtist(to id: String) {
-        let artistPage = ArtistListPageRouter.createModule(navigationController: navigationController, genreID: id)
+    func navigateToGenresArtist(to id: String, genreName: String) {
+        let artistPage = ArtistListPageRouter.createModule(navigationController: navigationController,
+                                                           genreID: id,
+                                                           genreName: genreName)
         self.navigationController?.pushViewController(artistPage, animated: true)
     }
 }
