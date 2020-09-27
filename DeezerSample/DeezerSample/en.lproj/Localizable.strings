@@ -8,3 +8,5 @@
 
 // MARK: - Home Page
 "GENRE_LIST_TITLE" = "Genre List";
+"ALERT_TITLE" = "Alert";
+"ALERT_CANCEL_BUTTON_TITLE" = "Cancel";

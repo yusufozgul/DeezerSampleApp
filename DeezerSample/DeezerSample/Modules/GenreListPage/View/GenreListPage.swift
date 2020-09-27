@@ -38,8 +38,10 @@ extension GenreListPage: GenreListViewProtocol {
         dataSource.apply(snapshot, animatingDifferences: true)
     }
     
-    func showError() {
-        
+    func showError(errorDescription: String) {
+        let alert = UIAlertController(title: "ALERT_TITLE".localized, message: errorDescription, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "ALERT_CANCEL_BUTTON_TITLE".localized, style: .cancel, handler: nil))
+        self.present(alert, animated: true)
     }
     
     func setLoading(isLoading: Bool) {

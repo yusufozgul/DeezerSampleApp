@@ -46,7 +46,7 @@ extension GenreListPresenter: GenreListInteractorOutput {
             snapshot.appendItems(genreList, toSection: .main)
             view?.showGenreList(with: snapshot)
         case .failure(let error):
-            print(error.localizedDescription)
+            view?.showError(errorDescription: error.localizedDescription)
         }
         view?.setLoading(isLoading: false)
     }

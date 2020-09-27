@@ -10,6 +10,6 @@ import Foundation
 protocol GenreListViewProtocol: class {
     func prepareUI()
     func showGenreList(with snapshot: GenreListPageSnapshot)
-    func showError()
+    func showError(errorDescription: String)
     func setLoading(isLoading: Bool)
 }
