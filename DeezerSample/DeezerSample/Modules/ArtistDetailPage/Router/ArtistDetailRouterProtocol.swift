@@ -9,5 +9,5 @@ import Foundation
 
 protocol ArtistDetailRouterProtocol {
     func navigateToArtistsDetail(to id: String)
-    func navigateToAlbumdetail(to id: String)
+    func navigateToAlbumdetail(to id: String, name: String)
 }

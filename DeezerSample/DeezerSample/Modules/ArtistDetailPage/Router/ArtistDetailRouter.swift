@@ -30,8 +30,9 @@ class ArtistDetailRouter {
 }
 
 extension ArtistDetailRouter: ArtistDetailRouterProtocol {
-    func navigateToAlbumdetail(to id: String) {
-        print("Navigating to \(id)")
+    func navigateToAlbumdetail(to id: String, name: String) {
+        let albumPage = AlbumDetailRouter.createModule(navigationController: navigationController, albumID: id, albumName: name)
+        self.navigationController?.pushViewController(albumPage, animated: true)
     }
     
     func navigateToArtistsDetail(to id: String) {
