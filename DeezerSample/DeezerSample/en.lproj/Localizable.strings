@@ -19,3 +19,10 @@
 
 "INDEX_ALBUMS" = "Albums";
 "INDEX_RELATED_ARTISTS" = "Related Artists";
+
+//MARK: - Search Page Sections
+"SEARCH_VC_TITLE" = "Search";
+"SEARCH_VC_BAR_TEXT" = "Search something";
+"ARTIST_SECTION" = "Artists";
+"ALBUM_SECTION" = "Albums";
+"TRACK_SECTION" = "Tracks";

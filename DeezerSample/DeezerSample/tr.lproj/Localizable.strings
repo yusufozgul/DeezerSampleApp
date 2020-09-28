@@ -5,4 +5,23 @@
   Created by Yusuf Özgül on 26.09.2020.
   
 */
-"a" = "tr";
+// MARK: - Home Page
+"GENRE_LIST_TITLE" = "Türler";
+"ALERT_TITLE" = "Uyarı";
+"ALERT_CANCEL_BUTTON_TITLE" = "Kapat";
+
+// MARK: - Artists Page
+"ARTIST_LIST_TITLE" = "Sanatçılar";
+
+
+// MARK: - Artist Detail Page
+
+"INDEX_ALBUMS" = "Albümler";
+"INDEX_RELATED_ARTISTS" = "İlgili Sanatçılar";
+
+//MARK: - Search Page Sections
+"SEARCH_VC_TITLE" = "Ara";
+"SEARCH_VC_BAR_TEXT" = "Bir şeyler arayın";
+"ARTIST_SECTION" = "Sanatçılar";
+"ALBUM_SECTION" = "Albümler";
+"TRACK_SECTION" = "Parçalar";

@@ -75,7 +75,7 @@
                             <constraints>
                                 <constraint firstAttribute="width" constant="35" id="3Yt-HV-uFh"/>
                             </constraints>
-                            <state key="normal" image="volume.3.fill" catalog="system"/>
+                            <state key="normal" image="speaker.wave.3.fill" catalog="system"/>
                             <connections>
                                 <action selector="tapVolume:" destination="d2g-Jz-YWi" eventType="touchUpInside" id="XCj-6j-YJX"/>
                             </connections>
@@ -111,6 +111,6 @@
     <resources>
         <image name="forward.fill" catalog="system" width="128" height="79"/>
         <image name="play.fill" catalog="system" width="116" height="128"/>
-        <image name="volume.3.fill" catalog="system" width="128" height="86"/>
+        <image name="speaker.wave.3.fill" catalog="system" width="128" height="86"/>
     </resources>
 </document>
