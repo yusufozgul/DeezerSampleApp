@@ -20,3 +20,18 @@ extension UIImageView {
         }
     }
 }
+
+class LoadAlbumImage {
+    class func load(from urlString: String, imageResult: @escaping (UIImage) -> Void) {
+        let defaultImage = UIImage(systemName: "music.quarternote.3")!
+        KingfisherManager.shared.retrieveImage(with: URL(string: urlString)!) { (result) in
+            switch result {
+            case .success(let image):
+                print(image.image)
+            case .failure(let error):
+                print(error)
+                imageResult(defaultImage)
+            }
+        }
+    }
+}
