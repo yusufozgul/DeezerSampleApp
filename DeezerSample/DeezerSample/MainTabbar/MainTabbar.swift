@@ -14,6 +14,7 @@ class MainTabbar: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadHomeTab()
+        loadSearchTab()
         handlePlayerStatus()
         view.addSubview(bar)
         bar.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
@@ -49,17 +50,6 @@ class MainTabbar: UITabBarController {
     }
 }
 
-extension MainTabbar {
-    func loadHomeTab() {
-        let navigationController = UINavigationController()
-        let homeView = GenreListRouter.createModule(navigationController: navigationController)
-        navigationController.viewControllers = [homeView]
-        navigationController.tabBarItem.image = UIImage(systemName: "house")
-        navigationController.tabBarItem.title = "Home"
-        self.addChild(navigationController)
-    }
-}
-
 extension MainTabbar: PlayerBarDelegate {
     func tapPlayPause() {
         MusicPlayer.player.togglePlayback()
@@ -71,5 +61,27 @@ extension MainTabbar: PlayerBarDelegate {
     
     func tapVolume() {
         
+    }
+}
+
+extension MainTabbar {
+    func loadHomeTab() {
+        let navigationController = UINavigationController()
+        let homeView = GenreListRouter.createModule(navigationController: navigationController)
+        navigationController.viewControllers.append(homeView)
+        navigationController.tabBarItem.image = UIImage(systemName: "house")
+        navigationController.tabBarItem.title = "Home"
+        self.addChild(navigationController)
+    }
+}
+
+extension MainTabbar {
+    func loadSearchTab() {
+        let navigationController = UINavigationController()
+        let searchView = SearchPageRouter.createModule(navigationController: navigationController)
+        navigationController.viewControllers.append(searchView)
+        navigationController.tabBarItem.image = UIImage(systemName: "magnifyingglass")
+        navigationController.tabBarItem.title = "Search"
+        self.addChild(navigationController)
     }
 }
