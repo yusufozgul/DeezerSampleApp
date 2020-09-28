@@ -8,7 +8,6 @@
 import Foundation
 import UIKit.NSDiffableDataSourceSectionSnapshot
 
-
 typealias AlbumDetailPageSnapshot = NSDiffableDataSourceSnapshot<AlbumDetailSection, AlbumDetailTrackListData>
 
 class AlbumDetailPresenter {
@@ -26,11 +25,17 @@ class AlbumDetailPresenter {
         self.albumID = albumID
         self.albumName = albumName
     }
+    
+    var player: MusicPlayerProtocol?
 }
 
 extension AlbumDetailPresenter: AlbumDetailPresenterProtocol {
     func selectTrack(at index: Int) {
-        print(trackList[index].preview)
+        var sortedList = trackList
+        sortedList.insert(sortedList.remove(at: index), at: 0)
+        player = MusicPlayer.player
+        player?.setTrackList(trackItems: sortedList)
+        player?.play()
     }
     
     func viewDidLoad() {
@@ -53,7 +58,12 @@ extension AlbumDetailPresenter: AlbumDetailInteractorOutput {
     func handleAlbumDetail(with result: Result<AlbumDetailResponse, ApiError>) {
         switch result {
         case .success(let response):
-            self.trackList = response.tracks.data.map({ AlbumDetailTrackListData(albumImage: response.coverXl, title: $0.title, duration: $0.duration, preview: $0.preview)})
+            self.trackList = response.tracks.data.map({ AlbumDetailTrackListData(albumImage: response.coverXl,
+                                                                                 title: $0.title,
+                                                                                 duration: $0.duration,
+                                                                                 preview: $0.preview,
+                                                                                 artistName: response.title,
+                                                                                 albumName: response.artist.name)})
             var snapshot = AlbumDetailPageSnapshot()
             snapshot.appendSections([.main])
             snapshot.appendItems(self.trackList, toSection: .main)

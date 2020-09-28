@@ -30,6 +30,8 @@
 		97647EE0251F465E007FA374 /* APITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97647EDF251F465E007FA374 /* APITest.swift */; };
 		97647EF2251F46DF007FA374 /* ResourceLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97647EF1251F46DF007FA374 /* ResourceLoader.swift */; };
 		97647EFD251F483E007FA374 /* genreList.json in Resources */ = {isa = PBXBuildFile; fileRef = 97647EFC251F483E007FA374 /* genreList.json */; };
+		977E7FE32521F2CF0034344B /* PlayerBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977E7FE22521F2CF0034344B /* PlayerBar.swift */; };
+		977E7FF62521F65A0034344B /* PlayerBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 977E7FF52521F65A0034344B /* PlayerBar.xib */; };
 		9789B95E25209B4700B6F484 /* ArtistListPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9789B95D25209B4700B6F484 /* ArtistListPageVC.swift */; };
 		9789B96625209B5B00B6F484 /* ArtistListPageVCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9789B96525209B5B00B6F484 /* ArtistListPageVCProtocol.swift */; };
 		9789B96B25209B6A00B6F484 /* ArtistListPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9789B96A25209B6A00B6F484 /* ArtistListPageInteractor.swift */; };
@@ -80,6 +82,7 @@
 		97F1583F252104A200835DF0 /* AlbumDetailPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F1583E252104A200835DF0 /* AlbumDetailPresenterProtocol.swift */; };
 		97F15845252108CF00835DF0 /* AlbumDetailRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F15844252108CF00835DF0 /* AlbumDetailRouterProtocol.swift */; };
 		97F1584A252108DC00835DF0 /* AlbumDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F15849252108DC00835DF0 /* AlbumDetailRouter.swift */; };
+		97F3481B2521CE8F0091FFB8 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F3481A2521CE8F0091FFB8 /* MusicPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +133,8 @@
 		97647EE8251F469C007FA374 /* genreList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = genreList.json; sourceTree = "<group>"; };
 		97647EF1251F46DF007FA374 /* ResourceLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceLoader.swift; sourceTree = "<group>"; };
 		97647EFC251F483E007FA374 /* genreList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = genreList.json; sourceTree = "<group>"; };
+		977E7FE22521F2CF0034344B /* PlayerBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerBar.swift; sourceTree = "<group>"; };
+		977E7FF52521F65A0034344B /* PlayerBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerBar.xib; sourceTree = "<group>"; };
 		9789B95D25209B4700B6F484 /* ArtistListPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistListPageVC.swift; sourceTree = "<group>"; };
 		9789B96525209B5B00B6F484 /* ArtistListPageVCProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistListPageVCProtocol.swift; sourceTree = "<group>"; };
 		9789B96A25209B6A00B6F484 /* ArtistListPageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistListPageInteractor.swift; sourceTree = "<group>"; };
@@ -181,6 +186,7 @@
 		97F1583E252104A200835DF0 /* AlbumDetailPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailPresenterProtocol.swift; sourceTree = "<group>"; };
 		97F15844252108CF00835DF0 /* AlbumDetailRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailRouterProtocol.swift; sourceTree = "<group>"; };
 		97F15849252108DC00835DF0 /* AlbumDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailRouter.swift; sourceTree = "<group>"; };
+		97F3481A2521CE8F0091FFB8 /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +241,7 @@
 		97337F6C251E5EC40088D515 /* DeezerSample */ = {
 			isa = PBXGroup;
 			children = (
+				97F348192521CE840091FFB8 /* Core */,
 				97A5ACB0251F53FF00BA7321 /* Components */,
 				97A5AD02251F8A3600BA7321 /* MainTabbar */,
 				97337FA3251E5FF90088D515 /* Modules */,
@@ -578,6 +585,8 @@
 			isa = PBXGroup;
 			children = (
 				97A5AD03251F8A4B00BA7321 /* MainTabbar.swift */,
+				977E7FE22521F2CF0034344B /* PlayerBar.swift */,
+				977E7FF52521F65A0034344B /* PlayerBar.xib */,
 			);
 			path = MainTabbar;
 			sourceTree = "<group>";
@@ -636,6 +645,14 @@
 				97F15844252108CF00835DF0 /* AlbumDetailRouterProtocol.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		97F348192521CE840091FFB8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				97F3481A2521CE8F0091FFB8 /* MusicPlayer.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -748,6 +765,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				977E7FF62521F65A0034344B /* PlayerBar.xib in Resources */,
 				9789B9C92520CC0300B6F484 /* ArtistDetailHeaderCell.xib in Resources */,
 				97337F7A251E5EC60088D515 /* LaunchScreen.storyboard in Resources */,
 				97A5ACCD251F575800BA7321 /* Main.storyboard in Resources */,
@@ -785,6 +803,7 @@
 			files = (
 				97647EAD251F397C007FA374 /* AlbumDetailRequest.swift in Sources */,
 				9789B96625209B5B00B6F484 /* ArtistListPageVCProtocol.swift in Sources */,
+				97F3481B2521CE8F0091FFB8 /* MusicPlayer.swift in Sources */,
 				97647E60251F2CAC007FA374 /* ApiExtension.swift in Sources */,
 				9789B9B22520BDD900B6F484 /* ArtistDetailPagePresenter.swift in Sources */,
 				97647EDA251F42D9007FA374 /* DataParser.swift in Sources */,
@@ -795,6 +814,7 @@
 				97F1583F252104A200835DF0 /* AlbumDetailPresenterProtocol.swift in Sources */,
 				97A5ACB3251F549100BA7321 /* GridCardView.swift in Sources */,
 				97A5ACEA251F842200BA7321 /* GenreListInteractorProtocol.swift in Sources */,
+				977E7FE32521F2CF0034344B /* PlayerBar.swift in Sources */,
 				9789B9C12520C4B600B6F484 /* ArtistDetailRouterProtocol.swift in Sources */,
 				97A5ACFE251F845F00BA7321 /* GenreListRouterProtocol.swift in Sources */,
 				9789B9A82520BCC500B6F484 /* ArtistDetailPageInteractor.swift in Sources */,
@@ -1023,6 +1043,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = Mock;
+				DEVELOPMENT_TEAM = E7R55236BC;
 				INFOPLIST_FILE = DeezerSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1042,6 +1063,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = Mock;
+				DEVELOPMENT_TEAM = E7R55236BC;
 				INFOPLIST_FILE = DeezerSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

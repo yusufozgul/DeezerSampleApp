@@ -17,9 +17,10 @@ struct AlbumDetailResponse: Decodable {
     let coverXl: String
     let fans: Int
     let tracks: TrackDetailDataResponse
+    let artist: ArtistResponse
     
     enum CodingKeys: String, CodingKey {
-        case id, title, cover, fans, tracks
+        case id, title, cover, fans, tracks, artist
         case coverSmall = "cover_small"
         case coverMedium = "cover_medium"
         case coverBig = "cover_big"
@@ -43,4 +44,6 @@ struct AlbumDetailTrackListData: Hashable {
     let title: String
     let duration: Int
     let preview: String
+    let artistName: String
+    let albumName: String
 }
