@@ -58,7 +58,8 @@ extension AlbumDetailPresenter: AlbumDetailInteractorOutput {
     func handleAlbumDetail(with result: Result<AlbumDetailResponse, ApiError>) {
         switch result {
         case .success(let response):
-            self.trackList = response.tracks.data.map({ AlbumDetailTrackListData(albumImage: response.coverXl,
+            self.trackList = response.tracks.data.map({ AlbumDetailTrackListData(id: response.id,
+                                                                                 albumImage: response.coverXl,
                                                                                  title: $0.title,
                                                                                  duration: $0.duration,
                                                                                  preview: $0.preview,
