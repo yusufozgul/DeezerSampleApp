@@ -1,0 +1,31 @@
+/* 
+  localize.strings
+  DeezerSample
+
+  Created by Yusuf Özgül on 26.09.2020.
+  
+*/
+
+// MARK: - Home Page
+"GENRE_LIST_TITLE" = "Genre List";
+"ALERT_TITLE" = "Alert";
+"ALERT_CANCEL_BUTTON_TITLE" = "Cancel";
+
+// MARK: - Artists Page
+"ARTIST_LIST_TITLE" = "Artist List";
+
+
+// MARK: - Artist Detail Page
+
+"INDEX_ALBUMS" = "Albums";
+"INDEX_RELATED_ARTISTS" = "Related Artists";
+
+//MARK: - Search Page Sections
+"SEARCH_VC_TITLE" = "Search";
+"SEARCH_VC_BAR_TEXT" = "Search something";
+"ARTIST_SECTION" = "Artists";
+"ALBUM_SECTION" = "Albums";
+"TRACK_SECTION" = "Tracks";
+
+// MARK: - Favorites Page
+"FAVORITES_PAGE_VC" = "Favorites";
