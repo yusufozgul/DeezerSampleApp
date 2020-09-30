@@ -41,7 +41,6 @@ extension SearchPageVC: SearchPageViewProtocol {
     
     func updateCollectionView(with snapshot: SearchPageSnapshot) {
         DispatchQueue.main.async { [weak self] in
-            self?.collectionView.reloadData()
             self?.dataSource.apply(snapshot, animatingDifferences: true)
         }
     }
@@ -113,6 +112,7 @@ extension SearchPageVC: UICollectionViewDelegate {
         
         dataSource.supplementaryViewProvider = { collectionView, kind, indexPath in
             let cell = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "UICollectionViewCell", for: indexPath)
+            cell.subviews.forEach({$0.removeFromSuperview()})
             let label = UILabel()
             switch indexPath.section {
             case 0:
@@ -126,9 +126,10 @@ extension SearchPageVC: UICollectionViewDelegate {
             }
             label.font = UIFont.systemFont(ofSize: 22, weight: .semibold)
             label.sizeToFit()
+            label.translatesAutoresizingMaskIntoConstraints = false
             cell.addSubview(label)
-            label.centerYAnchor.constraint(equalTo: cell.centerYAnchor).isActive = true
-            label.leadingAnchor.constraint(equalTo: cell.leadingAnchor, constant: 10).isActive = true
+            label.bottomAnchor.constraint(equalTo: cell.bottomAnchor).isActive = true
+            label.leadingAnchor.constraint(equalTo: cell.leadingAnchor, constant: 5).isActive = true
             return cell
         }
     }
