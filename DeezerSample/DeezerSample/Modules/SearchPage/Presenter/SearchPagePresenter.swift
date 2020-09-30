@@ -75,6 +75,21 @@ extension SearchPagePresenter: SearchPagePresenterProtocol {
         interactor.searchTrack(at: key)
         interactor.searchArtist(at: key)
     }
+    
+    func favoriteTrack(at index: Int) {
+        DataBaseController.shared.save(data: trackResult[index]) { result in
+            switch result {
+            case .success(_):
+                break
+            case .failure(_):
+                break
+            }
+        }
+    }
+    
+    func shareTrack(at index: Int) {
+        
+    }
 }
 
 extension SearchPagePresenter: SearchPageInteractorOutput {

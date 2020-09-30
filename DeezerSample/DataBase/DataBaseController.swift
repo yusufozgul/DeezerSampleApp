@@ -18,7 +18,7 @@ class DataBaseController {
         context = appDelegate.persistentContainer.viewContext
     }
     
-    func save(data: AlbumDetailTrackListData) {
+    func save(data: AlbumDetailTrackListData, completion: @escaping (Result<String, Error>) -> Void) {
         let entity = NSEntityDescription.entity(forEntityName: entityName, in: context)
         let newTrack = NSManagedObject(entity: entity!, insertInto: context)
         
@@ -30,8 +30,9 @@ class DataBaseController {
         newTrack.setValue(data.title, forKey: "title")
         do {
             try context.save()
+            completion(.success(""))
         } catch {
-            print("Failed saving")
+            completion(.failure(error))
         }
     }
     

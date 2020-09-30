@@ -77,6 +77,7 @@ extension AlbumDetailPageVC: UICollectionViewDelegate {
             cell?.setData(name: data.title, duration: String(data.duration), index: indexPath.row)
             cell?.trackImage.loadImage(from: data.albumImage)
             cell?.delegate = self
+            cell?.index = indexPath.row
             return cell
         })
     }

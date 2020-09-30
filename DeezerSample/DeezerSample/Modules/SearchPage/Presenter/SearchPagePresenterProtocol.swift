@@ -11,6 +11,8 @@ protocol SearchPagePresenterProtocol {
     func viewDidLoad()
     func search(with key: String)
     func selectItem(at indexPath: IndexPath)
+    func favoriteTrack(at index: Int)
+    func shareTrack(at index: Int)
 }
 
 protocol SearchPageInteractorOutput: class {

@@ -106,6 +106,7 @@ extension SearchPageVC: UICollectionViewDelegate {
                 cell?.setData(name: data.title, duration: String(data.duration), index: indexPath.row)
                 cell?.trackImage.loadImage(from: data.albumImage)
                 cell?.delegate = self
+                cell?.index = indexPath.row
                 return cell
             }
         })
@@ -206,11 +207,11 @@ extension SearchPageVC: UICollectionViewDelegate {
 
 extension SearchPageVC: TrackDetailCellDelegate {
     func tapFavorite(index: Int) {
-        
+        presenter.favoriteTrack(at: index)
     }
     
     func tapShare(index: Int) {
-        
+        presenter.shareTrack(at: index)
     }
 }
 

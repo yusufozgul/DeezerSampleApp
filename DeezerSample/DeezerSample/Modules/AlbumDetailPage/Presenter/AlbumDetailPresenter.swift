@@ -46,7 +46,14 @@ extension AlbumDetailPresenter: AlbumDetailPresenterProtocol {
     }
     
     func favoriteTrack(at index: Int) {
-        print("Favorite")
+        DataBaseController.shared.save(data: trackList[index]) { result in
+            switch result {
+            case .success(_):
+                break
+            case .failure(_):
+                break
+            }
+        }
     }
     
     func shareTrack(at index: Int) {
