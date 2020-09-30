@@ -40,18 +40,17 @@ extension SearchPageVC: SearchPageViewProtocol {
     }
     
     func updateCollectionView(with snapshot: SearchPageSnapshot) {
-        DispatchQueue.main.async { [self] in
-            collectionView.reloadData()
-            dataSource.apply(snapshot, animatingDifferences: true)
-            collectionView.reloadData()
+        DispatchQueue.main.async { [weak self] in
+            self?.collectionView.reloadData()
+            self?.dataSource.apply(snapshot, animatingDifferences: true)
         }
     }
     
     func showError(errorDescription: String) {
         let alert = UIAlertController(title: "ALERT_TITLE".localized, message: errorDescription, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "ALERT_CANCEL_BUTTON_TITLE".localized, style: .cancel, handler: nil))
-        DispatchQueue.main.async { [self] in
-            self.present(alert, animated: true)
+        DispatchQueue.main.async { [weak self] in
+            self?.present(alert, animated: true)
         }
     }
     
@@ -96,7 +95,7 @@ extension SearchPageVC: UICollectionViewDelegate {
             case .album(let data):
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ArtistDetailPageAlbumCell.reuseIdentifier, for: indexPath) as? ArtistDetailPageAlbumCell
                 cell?.setData(title: data.title, date: data.title)
-                cell?.albumImage.loadImage(from: data.coverXl)
+                cell?.albumImage.loadImage(from: data.coverXl ?? data.cover)
                 return cell
             case .artist(let data):
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GridCardView.reuseIdentifier, for: indexPath) as? GridCardView
@@ -136,7 +135,6 @@ extension SearchPageVC: UICollectionViewDelegate {
     
     func createLayout() -> UICollectionViewLayout {
         let layout = UICollectionViewCompositionalLayout { sectionIndex, _ in
-            print(sectionIndex)
             switch sectionIndex {
             case 0:
                 return self.cardLayout()
@@ -217,7 +215,6 @@ extension SearchPageVC: TrackDetailCellDelegate {
 
 extension SearchPageVC: UISearchResultsUpdating{
     func updateSearchResults(for searchController: UISearchController) {
-        guard let text = searchController.searchBar.text, text != "" else { return }
-        presenter.search(with: text)
+        presenter.search(with: searchController.searchBar.text!)
     }
 }
