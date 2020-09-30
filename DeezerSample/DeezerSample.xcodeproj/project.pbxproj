@@ -80,6 +80,8 @@
 		97A5AD1E251F960E00BA7321 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A5AD1D251F960E00BA7321 /* ImageLoader.swift */; };
 		97A5AD33251F9C9B00BA7321 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97A5AD35251F9C9B00BA7321 /* Localizable.strings */; };
 		97A5AD3B251F9CC700BA7321 /* LocalizeConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A5AD3A251F9CC700BA7321 /* LocalizeConverter.swift */; };
+		97EC22F525248BB8001D61D2 /* Favorites.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 97EC22F325248BB8001D61D2 /* Favorites.xcdatamodeld */; };
+		97EC233C25248D53001D61D2 /* DataBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EC233B25248D53001D61D2 /* DataBaseController.swift */; };
 		97F158182520FD7E00835DF0 /* TrackDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F158162520FD7E00835DF0 /* TrackDetailCell.swift */; };
 		97F158192520FD7E00835DF0 /* TrackDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97F158172520FD7E00835DF0 /* TrackDetailCell.xib */; };
 		97F1581E252101AA00835DF0 /* AlbumDetailPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F1581D252101AA00835DF0 /* AlbumDetailPageVC.swift */; };
@@ -192,6 +194,8 @@
 		97A5AD34251F9C9B00BA7321 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		97A5AD39251F9CA000BA7321 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		97A5AD3A251F9CC700BA7321 /* LocalizeConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizeConverter.swift; sourceTree = "<group>"; };
+		97EC22F425248BB8001D61D2 /* Favorites.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Favorites.xcdatamodel; sourceTree = "<group>"; };
+		97EC233B25248D53001D61D2 /* DataBaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseController.swift; sourceTree = "<group>"; };
 		97F158162520FD7E00835DF0 /* TrackDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailCell.swift; sourceTree = "<group>"; };
 		97F158172520FD7E00835DF0 /* TrackDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackDetailCell.xib; sourceTree = "<group>"; };
 		97F1581D252101AA00835DF0 /* AlbumDetailPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailPageVC.swift; sourceTree = "<group>"; };
@@ -236,6 +240,7 @@
 			children = (
 				97337FA2251E5FF10088D515 /* API */,
 				97337F6C251E5EC40088D515 /* DeezerSample */,
+				97EC22F225248BA4001D61D2 /* DataBase */,
 				97A5AD0B251F8DBE00BA7321 /* Utility */,
 				97647EF0251F46AD007FA374 /* Mock */,
 				97337F83251E5EC70088D515 /* DeezerSampleTests */,
@@ -310,6 +315,7 @@
 				97647E9B251F3594007FA374 /* ArtistDetailPage */,
 				97647EAA251F395E007FA374 /* AlbumDetailPage */,
 				97647EB9251F3C64007FA374 /* SearchPage */,
+				97EC22EC25248AFF001D61D2 /* FavoritesPage */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -665,6 +671,62 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		97EC22EC25248AFF001D61D2 /* FavoritesPage */ = {
+			isa = PBXGroup;
+			children = (
+				97EC22F125248B4B001D61D2 /* View */,
+				97EC22F025248B42001D61D2 /* Interactor */,
+				97EC22EF25248B3C001D61D2 /* Presenter */,
+				97EC22EE25248B34001D61D2 /* Entity */,
+				97EC22ED25248B2C001D61D2 /* Router */,
+			);
+			path = FavoritesPage;
+			sourceTree = "<group>";
+		};
+		97EC22ED25248B2C001D61D2 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		97EC22EE25248B34001D61D2 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		97EC22EF25248B3C001D61D2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		97EC22F025248B42001D61D2 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		97EC22F125248B4B001D61D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		97EC22F225248BA4001D61D2 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				97EC22F325248BB8001D61D2 /* Favorites.xcdatamodeld */,
+				97EC233B25248D53001D61D2 /* DataBaseController.swift */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
 		97F157F82520FC0400835DF0 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -906,6 +968,7 @@
 				9789B95E25209B4700B6F484 /* ArtistListPageVC.swift in Sources */,
 				97F1584A252108DC00835DF0 /* AlbumDetailRouter.swift in Sources */,
 				97A5ACEF251F843400BA7321 /* GenreListPresenter.swift in Sources */,
+				97EC22F525248BB8001D61D2 /* Favorites.xcdatamodeld in Sources */,
 				9789B9B72520BDE600B6F484 /* ArtistDetailPagePresenterProtocol.swift in Sources */,
 				9789B97F25209BB200B6F484 /* ArtistListPageRouter.swift in Sources */,
 				97A5ACD5251F5CE900BA7321 /* GenreListPage.swift in Sources */,
@@ -922,6 +985,7 @@
 				97F158182520FD7E00835DF0 /* TrackDetailCell.swift in Sources */,
 				97647EBC251F3C7F007FA374 /* SearchRequest.swift in Sources */,
 				97F1581E252101AA00835DF0 /* AlbumDetailPageVC.swift in Sources */,
+				97EC233C25248D53001D61D2 /* DataBaseController.swift in Sources */,
 				9789B9D42520CEA200B6F484 /* ArtistDetailSelectorCell.swift in Sources */,
 				9789B9BC2520C4A700B6F484 /* ArtistDetailRouter.swift in Sources */,
 				9789B97025209B7A00B6F484 /* ArtistListPageInteractorProtocol.swift in Sources */,
@@ -1287,6 +1351,19 @@
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		97EC22F325248BB8001D61D2 /* Favorites.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				97EC22F425248BB8001D61D2 /* Favorites.xcdatamodel */,
+			);
+			currentVersion = 97EC22F425248BB8001D61D2 /* Favorites.xcdatamodel */;
+			path = Favorites.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 97337F62251E5EC40088D515 /* Project object */;
 }
