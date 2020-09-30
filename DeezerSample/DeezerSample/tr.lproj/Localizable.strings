@@ -25,3 +25,6 @@
 "ARTIST_SECTION" = "Sanatçılar";
 "ALBUM_SECTION" = "Albümler";
 "TRACK_SECTION" = "Parçalar";
+
+// MARK: - Favorites Page
+"FAVORITES_PAGE_VC" = "Favoriler";

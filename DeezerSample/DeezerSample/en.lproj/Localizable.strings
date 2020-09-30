@@ -26,3 +26,6 @@
 "ARTIST_SECTION" = "Artists";
 "ALBUM_SECTION" = "Albums";
 "TRACK_SECTION" = "Tracks";
+
+// MARK: - Favorites Page
+"FAVORITES_PAGE_VC" = "Favorites";

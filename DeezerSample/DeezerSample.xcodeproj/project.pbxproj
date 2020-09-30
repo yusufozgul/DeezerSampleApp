@@ -82,6 +82,14 @@
 		97A5AD3B251F9CC700BA7321 /* LocalizeConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A5AD3A251F9CC700BA7321 /* LocalizeConverter.swift */; };
 		97EC22F525248BB8001D61D2 /* Favorites.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 97EC22F325248BB8001D61D2 /* Favorites.xcdatamodeld */; };
 		97EC233C25248D53001D61D2 /* DataBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EC233B25248D53001D61D2 /* DataBaseController.swift */; };
+		97EC234D25249E95001D61D2 /* FavoritesPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EC234C25249E95001D61D2 /* FavoritesPageInteractor.swift */; };
+		97EC235525249E9D001D61D2 /* FavoritesPageInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EC235425249E9D001D61D2 /* FavoritesPageInteractorProtocol.swift */; };
+		97EC235A25249EF3001D61D2 /* FavoritesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EC235925249EF3001D61D2 /* FavoritesPresenter.swift */; };
+		97EC235F25249F02001D61D2 /* FavoritesPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EC235E25249F02001D61D2 /* FavoritesPresenterProtocol.swift */; };
+		97EC23642524A0F6001D61D2 /* FavoritesPageViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EC23632524A0F6001D61D2 /* FavoritesPageViewProtocol.swift */; };
+		97EC23692524A130001D61D2 /* FavoritesPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EC23682524A130001D61D2 /* FavoritesPageVC.swift */; };
+		97EC236E2524A208001D61D2 /* FavoritesPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EC236D2524A208001D61D2 /* FavoritesPageRouter.swift */; };
+		97EC23732524A212001D61D2 /* FavoritesPageRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EC23722524A212001D61D2 /* FavoritesPageRouterProtocol.swift */; };
 		97F158182520FD7E00835DF0 /* TrackDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F158162520FD7E00835DF0 /* TrackDetailCell.swift */; };
 		97F158192520FD7E00835DF0 /* TrackDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97F158172520FD7E00835DF0 /* TrackDetailCell.xib */; };
 		97F1581E252101AA00835DF0 /* AlbumDetailPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F1581D252101AA00835DF0 /* AlbumDetailPageVC.swift */; };
@@ -196,6 +204,14 @@
 		97A5AD3A251F9CC700BA7321 /* LocalizeConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizeConverter.swift; sourceTree = "<group>"; };
 		97EC22F425248BB8001D61D2 /* Favorites.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Favorites.xcdatamodel; sourceTree = "<group>"; };
 		97EC233B25248D53001D61D2 /* DataBaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseController.swift; sourceTree = "<group>"; };
+		97EC234C25249E95001D61D2 /* FavoritesPageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPageInteractor.swift; sourceTree = "<group>"; };
+		97EC235425249E9D001D61D2 /* FavoritesPageInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPageInteractorProtocol.swift; sourceTree = "<group>"; };
+		97EC235925249EF3001D61D2 /* FavoritesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPresenter.swift; sourceTree = "<group>"; };
+		97EC235E25249F02001D61D2 /* FavoritesPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPresenterProtocol.swift; sourceTree = "<group>"; };
+		97EC23632524A0F6001D61D2 /* FavoritesPageViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPageViewProtocol.swift; sourceTree = "<group>"; };
+		97EC23682524A130001D61D2 /* FavoritesPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPageVC.swift; sourceTree = "<group>"; };
+		97EC236D2524A208001D61D2 /* FavoritesPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPageRouter.swift; sourceTree = "<group>"; };
+		97EC23722524A212001D61D2 /* FavoritesPageRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPageRouterProtocol.swift; sourceTree = "<group>"; };
 		97F158162520FD7E00835DF0 /* TrackDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailCell.swift; sourceTree = "<group>"; };
 		97F158172520FD7E00835DF0 /* TrackDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackDetailCell.xib; sourceTree = "<group>"; };
 		97F1581D252101AA00835DF0 /* AlbumDetailPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailPageVC.swift; sourceTree = "<group>"; };
@@ -677,7 +693,6 @@
 				97EC22F125248B4B001D61D2 /* View */,
 				97EC22F025248B42001D61D2 /* Interactor */,
 				97EC22EF25248B3C001D61D2 /* Presenter */,
-				97EC22EE25248B34001D61D2 /* Entity */,
 				97EC22ED25248B2C001D61D2 /* Router */,
 			);
 			path = FavoritesPage;
@@ -686,20 +701,17 @@
 		97EC22ED25248B2C001D61D2 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				97EC236D2524A208001D61D2 /* FavoritesPageRouter.swift */,
+				97EC23722524A212001D61D2 /* FavoritesPageRouterProtocol.swift */,
 			);
 			path = Router;
-			sourceTree = "<group>";
-		};
-		97EC22EE25248B34001D61D2 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Entity;
 			sourceTree = "<group>";
 		};
 		97EC22EF25248B3C001D61D2 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				97EC235925249EF3001D61D2 /* FavoritesPresenter.swift */,
+				97EC235E25249F02001D61D2 /* FavoritesPresenterProtocol.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -707,6 +719,8 @@
 		97EC22F025248B42001D61D2 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				97EC234C25249E95001D61D2 /* FavoritesPageInteractor.swift */,
+				97EC235425249E9D001D61D2 /* FavoritesPageInteractorProtocol.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -714,6 +728,8 @@
 		97EC22F125248B4B001D61D2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				97EC23682524A130001D61D2 /* FavoritesPageVC.swift */,
+				97EC23632524A0F6001D61D2 /* FavoritesPageViewProtocol.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -932,15 +948,19 @@
 				977F32982522119A0027125E /* SearchPageInteractorProtocol.swift in Sources */,
 				97F3481B2521CE8F0091FFB8 /* MusicPlayer.swift in Sources */,
 				97647E60251F2CAC007FA374 /* ApiExtension.swift in Sources */,
+				97EC236E2524A208001D61D2 /* FavoritesPageRouter.swift in Sources */,
 				9789B9B22520BDD900B6F484 /* ArtistDetailPagePresenter.swift in Sources */,
+				97EC235F25249F02001D61D2 /* FavoritesPresenterProtocol.swift in Sources */,
 				97647EDA251F42D9007FA374 /* DataParser.swift in Sources */,
 				9789B96B25209B6A00B6F484 /* ArtistListPageInteractor.swift in Sources */,
 				97F1582C252103AA00835DF0 /* AlbumDetailPageViewProtocol.swift in Sources */,
 				97337F6E251E5EC40088D515 /* AppDelegate.swift in Sources */,
+				97EC23642524A0F6001D61D2 /* FavoritesPageViewProtocol.swift in Sources */,
 				97647E75251F2F9B007FA374 /* GenreResponse.swift in Sources */,
 				97F1583F252104A200835DF0 /* AlbumDetailPresenterProtocol.swift in Sources */,
 				97A5ACB3251F549100BA7321 /* GridCardView.swift in Sources */,
 				97A5ACEA251F842200BA7321 /* GenreListInteractorProtocol.swift in Sources */,
+				97EC235A25249EF3001D61D2 /* FavoritesPresenter.swift in Sources */,
 				977E7FE32521F2CF0034344B /* PlayerBar.swift in Sources */,
 				9789B9C12520C4B600B6F484 /* ArtistDetailRouterProtocol.swift in Sources */,
 				97A5ACFE251F845F00BA7321 /* GenreListRouterProtocol.swift in Sources */,
@@ -949,6 +969,7 @@
 				977F32862522109C0027125E /* SearchPageVC.swift in Sources */,
 				97F15824252101C800835DF0 /* AlbumDetailInteractor.swift in Sources */,
 				97A5AD04251F8A4B00BA7321 /* MainTabbar.swift in Sources */,
+				97EC23732524A212001D61D2 /* FavoritesPageRouterProtocol.swift in Sources */,
 				97F15845252108CF00835DF0 /* AlbumDetailRouterProtocol.swift in Sources */,
 				97647E9E251F35AF007FA374 /* ArtistDetailRequest.swift in Sources */,
 				97647EB5251F39C7007FA374 /* AlbumDetailResponse.swift in Sources */,
@@ -960,9 +981,11 @@
 				977F32A2252211CC0027125E /* SearchPagePresenterProtocol.swift in Sources */,
 				9789B9A32520BC5800B6F484 /* ArtistDetailPageViewProtocol.swift in Sources */,
 				97A5AD3B251F9CC700BA7321 /* LocalizeConverter.swift in Sources */,
+				97EC234D25249E95001D61D2 /* FavoritesPageInteractor.swift in Sources */,
 				97F158372521049400835DF0 /* AlbumDetailPresenter.swift in Sources */,
 				97647E7F251F3155007FA374 /* ApiResponse.swift in Sources */,
 				97A5AD1E251F960E00BA7321 /* ImageLoader.swift in Sources */,
+				97EC23692524A130001D61D2 /* FavoritesPageVC.swift in Sources */,
 				97A5ACF4251F844300BA7321 /* GenreListPresenterProtocol.swift in Sources */,
 				97A5ACDD251F840100BA7321 /* GenreListViewProtocol.swift in Sources */,
 				9789B95E25209B4700B6F484 /* ArtistListPageVC.swift in Sources */,
@@ -980,6 +1003,7 @@
 				9789B97525209B8F00B6F484 /* ArtistListPagePresenter.swift in Sources */,
 				97647EA6251F363C007FA374 /* ArtistDetailResponse.swift in Sources */,
 				97647EC4251F3CB7007FA374 /* SearchResponse.swift in Sources */,
+				97EC235525249E9D001D61D2 /* FavoritesPageInteractorProtocol.swift in Sources */,
 				977F3293252211880027125E /* SearchPageInteractor.swift in Sources */,
 				977F32AC252211F40027125E /* SearchPageRouterProtocol.swift in Sources */,
 				97F158182520FD7E00835DF0 /* TrackDetailCell.swift in Sources */,
