@@ -20,7 +20,7 @@ class ApiService<T: Decodable> {
     ///   - request: `ApiRequestProtocol` for request detail.
     ///   - completion: If `result` is error return `ApiError` otherwise return `T` type
     func getData(request: ApiRequestProtocol, completion: @escaping (Result<T, ApiError>) -> Void) {
-        guard let url = URL(string: request.url) else {
+        guard let urlString = request.url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed), let url = URL(string: urlString) else {
             completion(.failure(.urlEncode))
             return
         }
