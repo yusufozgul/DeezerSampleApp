@@ -18,6 +18,7 @@ struct SearchTrackResponse: Decodable, Hashable {
     let preview: String
     let album: SearchTrackResponseAlbumData
     let artist: SearchTrackResponseArtistData
+    let link: String
 }
 
 struct SearchTrackResponseAlbumData: Decodable, Hashable {

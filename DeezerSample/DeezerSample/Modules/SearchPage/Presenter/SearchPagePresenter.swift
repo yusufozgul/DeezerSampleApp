@@ -88,7 +88,8 @@ extension SearchPagePresenter: SearchPagePresenterProtocol {
     }
     
     func shareTrack(at index: Int) {
-        
+        let track = trackResult[index]
+        view?.share(trackUrl: track.link)
     }
 }
 
@@ -128,7 +129,8 @@ extension SearchPagePresenter: SearchPageInteractorOutput {
                                                                            duration: 0,
                                                                            preview: $0.preview,
                                                                            artistName: $0.title,
-                                                                           albumName: $0.artist.name)})
+                                                                           albumName: $0.artist.name,
+                                                                           link: $0.link)})
             self.trackResult.forEach({ snapshot.appendItems([.track($0)], toSection: .track)})
             view?.updateCollectionView(with: snapshot)
         case .failure(let error):

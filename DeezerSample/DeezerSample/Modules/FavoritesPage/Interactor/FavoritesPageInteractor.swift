@@ -14,4 +14,8 @@ class FavoritesPageInteractor: FavoritesPageInteractorProtocol {
         let favorites = DataBaseController.shared.fetch()
         output?.handleTrackResult(with: .success(favorites))
     }
+    
+    func deleteFavorite(at id: Int) {
+        DataBaseController.shared.deleteTrack(at: id)
+    }
 }

@@ -9,4 +9,5 @@ import Foundation
 
 protocol FavoritesPageInteractorProtocol {
     func getFavorites()
+    func deleteFavorite(at id: Int)
 }

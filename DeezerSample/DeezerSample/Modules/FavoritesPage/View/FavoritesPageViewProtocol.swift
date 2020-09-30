@@ -12,4 +12,5 @@ protocol FavoritesPageViewProtocol: class {
     func showTrackList(with snapshot: FavoritesPageSnapshot)
     func showError(errorDescription: String)
     func setLoading(isLoading: Bool)
+    func share(trackUrl: String)
 }

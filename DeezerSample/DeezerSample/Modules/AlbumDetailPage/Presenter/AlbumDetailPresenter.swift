@@ -57,7 +57,8 @@ extension AlbumDetailPresenter: AlbumDetailPresenterProtocol {
     }
     
     func shareTrack(at index: Int) {
-        print("share")
+        let track = trackList[index]
+        view?.share(trackUrl: track.link)
     }
 }
 
@@ -71,7 +72,7 @@ extension AlbumDetailPresenter: AlbumDetailInteractorOutput {
                                                                                  duration: $0.duration,
                                                                                  preview: $0.preview,
                                                                                  artistName: response.title,
-                                                                                 albumName: response.artist.name)})
+                                                                                 albumName: response.artist.name, link: $0.link)})
             var snapshot = AlbumDetailPageSnapshot()
             snapshot.appendSections([.main])
             snapshot.appendItems(self.trackList, toSection: .main)

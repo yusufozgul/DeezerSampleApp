@@ -58,6 +58,14 @@ extension SearchPageVC: SearchPageViewProtocol {
             isLoading ? loadingIndicator.startAnimating() : loadingIndicator.stopAnimating()
         }
     }
+    
+    func share(trackUrl: String) {
+        let objectsToShare:URL = URL(string: trackUrl)!
+        let sharedObjects:[AnyObject] = [objectsToShare as AnyObject]
+        let activityViewController = UIActivityViewController(activityItems: sharedObjects, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        self.present(activityViewController, animated: true, completion: nil)
+    }
 }
 
 extension SearchPageVC {

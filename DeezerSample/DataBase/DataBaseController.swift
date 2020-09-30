@@ -29,6 +29,7 @@ class DataBaseController {
         newTrack.setValue(data.duration, forKey: "duration")
         newTrack.setValue(data.preview, forKey: "preview")
         newTrack.setValue(data.title, forKey: "title")
+        newTrack.setValue(data.link, forKey: "link")
         do {
             try context.save()
             completion(.success(""))
@@ -50,7 +51,8 @@ class DataBaseController {
                                                           duration: data.value(forKey: "duration") as! Int,
                                                           preview: data.value(forKey: "preview") as! String,
                                                           artistName: data.value(forKey: "artistName") as! String,
-                                                          albumName: data.value(forKey: "albumName") as! String))
+                                                          albumName: data.value(forKey: "albumName") as! String,
+                                                          link: data.value(forKey: "link") as! String))
             }
         } catch {
             print("Failed")
@@ -59,6 +61,7 @@ class DataBaseController {
     }
     
     func deleteTrack(at id: Int) {
+        print(id)
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
         request.returnsObjectsAsFaults = false
         do {
@@ -66,6 +69,8 @@ class DataBaseController {
             for data in result as! [NSManagedObject] {
                 if data.value(forKey: "id") as! Int == id {
                     context.delete(data)
+                    try? context.save()
+                    break
                 }
             }
         } catch {

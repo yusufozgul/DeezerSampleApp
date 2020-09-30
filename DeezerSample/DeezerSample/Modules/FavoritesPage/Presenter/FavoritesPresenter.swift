@@ -41,15 +41,16 @@ extension FavoritesPresenter: FavoritesPresenterProtocol {
         interactor.getFavorites()
     }
     
-    func favoriteTrack(at index: Int) {
-        
+    func unfavoriteTrack(at index: Int) {
+        let track = trackResult[index]
+        interactor.deleteFavorite(at: track.id)
+        reloadList()
     }
     
     func shareTrack(at index: Int) {
-        
+        let track = trackResult[index]
+        view?.share(trackUrl: track.link)
     }
-    
-    
 }
 
 extension FavoritesPresenter: FavoritesInteractorOutput {
@@ -57,6 +58,7 @@ extension FavoritesPresenter: FavoritesInteractorOutput {
         switch result {
         case .success(let data):
             self.trackResult = data
+            self.trackResult.sort(by: {$0.title < $1.title})
             var snapshot = FavoritesPageSnapshot()
             snapshot.appendSections([.main])
             snapshot.appendItems(self.trackResult, toSection: .main)

@@ -13,4 +13,5 @@ protocol SearchPageViewProtocol: class {
     func updateCollectionView(with snapshot: SearchPageSnapshot)
     func showError(errorDescription: String)
     func setLoading(isLoading: Bool)
+    func share(trackUrl: String)
 }

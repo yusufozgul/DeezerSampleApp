@@ -10,7 +10,7 @@ import Foundation
 protocol FavoritesPresenterProtocol {
     func viewDidLoad()
     func selectTrack(at index: Int)
-    func favoriteTrack(at index: Int)
+    func unfavoriteTrack(at index: Int)
     func shareTrack(at index: Int)
     func reloadList()
 }

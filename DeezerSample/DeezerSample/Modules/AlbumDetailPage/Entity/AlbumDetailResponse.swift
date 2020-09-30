@@ -37,6 +37,7 @@ struct TrackDetailResponse: Decodable {
     let title: String
     let duration: Int
     let preview: String
+    let link: String
 }
 
 struct AlbumDetailTrackListData: Hashable {
@@ -47,4 +48,5 @@ struct AlbumDetailTrackListData: Hashable {
     let preview: String
     let artistName: String
     let albumName: String
+    let link: String
 }

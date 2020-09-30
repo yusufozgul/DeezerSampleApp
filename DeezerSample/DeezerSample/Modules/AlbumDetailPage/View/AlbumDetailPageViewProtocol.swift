@@ -13,4 +13,5 @@ protocol AlbumDetailPageViewProtocol: class {
     func showTrackList(with snapshot: AlbumDetailPageSnapshot)
     func showError(errorDescription: String)
     func setLoading(isLoading: Bool)
+    func share(trackUrl: String)
 }
