@@ -122,7 +122,8 @@ extension SearchPagePresenter: SearchPageInteractorOutput {
         switch result {
         case .success(let trackResult):
             self.removeDataSourceItems(.track)
-            self.trackResult = trackResult.map({ AlbumDetailTrackListData(albumImage: $0.album.coverXl ?? $0.album.cover,
+            self.trackResult = trackResult.map({ AlbumDetailTrackListData(id: $0.id,
+                                                                          albumImage: $0.album.coverXl ?? $0.album.cover,
                                                                            title: $0.title,
                                                                            duration: 0,
                                                                            preview: $0.preview,

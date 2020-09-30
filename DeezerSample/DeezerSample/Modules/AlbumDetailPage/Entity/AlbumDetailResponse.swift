@@ -40,6 +40,7 @@ struct TrackDetailResponse: Decodable {
 }
 
 struct AlbumDetailTrackListData: Hashable {
+    let id: Int
     var albumImage: String
     let title: String
     let duration: Int

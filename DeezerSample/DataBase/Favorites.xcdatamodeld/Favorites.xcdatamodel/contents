@@ -5,10 +5,11 @@
         <attribute name="albumName" optional="YES" attributeType="String"/>
         <attribute name="artistName" optional="YES" attributeType="String"/>
         <attribute name="duration" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="preview" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="FavoriteTracks" positionX="-63" positionY="-18" width="128" height="119"/>
+        <element name="FavoriteTracks" positionX="-63" positionY="-18" width="128" height="134"/>
     </elements>
 </model>
