@@ -15,6 +15,7 @@ class MainTabbar: UITabBarController {
         super.viewDidLoad()
         loadHomeTab()
         loadSearchTab()
+        loadFavoritesTab()
         handlePlayerStatus()
         view.addSubview(bar)
         bar.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
@@ -82,6 +83,17 @@ extension MainTabbar {
         navigationController.viewControllers.append(searchView)
         navigationController.tabBarItem.image = UIImage(systemName: "magnifyingglass")
         navigationController.tabBarItem.title = "Search"
+        self.addChild(navigationController)
+    }
+}
+
+extension MainTabbar {
+    func loadFavoritesTab() {
+        let navigationController = UINavigationController()
+        let favoritesView = FavoritesPageRouter.createModule(navigationController: navigationController)
+        navigationController.viewControllers.append(favoritesView)
+        navigationController.tabBarItem.image = UIImage(systemName: "heart.fill")
+        navigationController.tabBarItem.title = "Favorites"
         self.addChild(navigationController)
     }
 }
