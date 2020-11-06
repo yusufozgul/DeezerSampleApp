@@ -1,10 +1,12 @@
 # DeezerSampleApp
 Sample Deezer app with Deezer API  written in Swift using VIPER architecture.
 
+- [x] System Music Player Support
+- [x] Lock Screen, Control Center music control support
 - [x] VIPER architecture
 - [x] Modular Design
 - [x] JSON Api Service
-- [x] Collection View Compositional Layoıt
+- [x] Collection View Compositional Layout
 - [x] Unit Test ( Api Service Only)
 
 
